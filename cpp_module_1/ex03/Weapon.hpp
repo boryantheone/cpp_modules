@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcollin <jcollin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 20:33:45 by jcollin           #+#    #+#             */
-/*   Updated: 2022/07/09 20:33:46 by jcollin          ###   ########.fr       */
+/*   Created: 2022/07/10 15:03:16 by jcollin           #+#    #+#             */
+/*   Updated: 2022/07/10 15:03:19 by jcollin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 #include <iostream>
 
+class Weapon {
+private:
+    std::string _type;
+public:
+    Weapon(const std::string &type);
+    Weapon();
+    ~Weapon();
+    std::string getType() const;
+    void setType(const std::string &type);
+};
 
-int main(int ac, char *av[])
-{
-	if (ac < 2)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for(int i = 1; av[i]; i++)
-			for(int j = 0; av[i][j]; j++)
-				std::cout << (char )toupper(av[i][j]);
-		std::cout << std::endl;
-	}
-	return 0;
-}
+#endif

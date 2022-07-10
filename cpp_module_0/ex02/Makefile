@@ -6,10 +6,10 @@ RM			=	rm -rf
 
 # ------------------------------------------------------------------------------
 
-NAME		=	PhoneBook
-HDRS		=	PhoneBook.h	PhoneBook.hpp	Contact.hpp
-SRCS		=	main.cpp	PhoneBook.cpp	Contact.cpp
-OBJS	=	${SRCS:%.cpp=%.o}
+NAME		=	cpp_module
+HDRS		=	Account.hpp
+SRCS		=	tests.cpp	Account.cpp
+OBJS		=	${SRCS:%.cpp=%.o}
 
 # ------------------------------------------------------------------------------
 
@@ -21,11 +21,11 @@ _END	=	\e[33m
 
 # ------------------------------------------------------------------------------
 
-%.o:		%.cpp	${HDR}
-			@${CC} ${FLAGS1} ${FLAGS2} ${OPTFLAGS} -c -o $@ $<
+#%.o:		%.cpp	${HDR}
+#			@${CC} ${FLAGS1} ${FLAGS2} ${OPTFLAGS} -c -o $@ $<
 
 ${NAME}:	${OBJS}
-			${CC} ${FLAGS1} ${FLAGS2}  ${SRCS} -o ${NAME}
+			${CC}	${FLAGS1}	${FLAGS2} ${OBJS}	-o ${NAME}
 			@printf "${_PURPLE}${READY}${_END}\n"
 
 

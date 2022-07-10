@@ -6,9 +6,9 @@ RM			=	rm -rf
 
 # ------------------------------------------------------------------------------
 
-NAME		=	PhoneBook
-HDRS		=	PhoneBook.h	PhoneBook.hpp	Contact.hpp
-SRCS		=	main.cpp	PhoneBook.cpp	Contact.cpp
+NAME		=	zombieHorde
+HDRS		=	Zombie.hpp
+SRCS		=	main.cpp	Zombie.cpp	zombieHorde.cpp
 OBJS	=	${SRCS:%.cpp=%.o}
 
 # ------------------------------------------------------------------------------

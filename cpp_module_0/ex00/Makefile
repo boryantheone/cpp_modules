@@ -1,7 +1,6 @@
 CC			=	c++
 FLAGS1		=	-Wall -Wextra -Werror
 FLAGS2		=	-std=c++98
-OPTFLAGS	=	-O2
 
 RM			=	rm -rf
 
@@ -22,11 +21,9 @@ _END	=	\e[33m
 
 # ------------------------------------------------------------------------------
 
-#%.o:		%.cpp	${HDR}
-#			@${CC} ${FLAGS1} ${FLAGS2} ${OPTFLAGS} -c -o $@ $<
 
 ${NAME}:	${OBJS}
-			${CC} ${FLAGS1} ${FLAGS2} ${OPTFLAGS} ${SRCS} -o ${NAME}
+			${CC} ${FLAGS1} ${FLAGS2} ${SRCS} -o ${NAME}
 			@printf "${_PURPLE}${READY}${_END}\n"
 
 

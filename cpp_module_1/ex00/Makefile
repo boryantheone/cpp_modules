@@ -6,9 +6,9 @@ RM			=	rm -rf
 
 # ------------------------------------------------------------------------------
 
-NAME		=	PhoneBook
-HDRS		=	PhoneBook.h	PhoneBook.hpp	Contact.hpp
-SRCS		=	main.cpp	PhoneBook.cpp	Contact.cpp
+NAME		=	zombie
+HDRS		=	Zombie.hpp
+SRCS		=	main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJS	=	${SRCS:%.cpp=%.o}
 
 # ------------------------------------------------------------------------------
